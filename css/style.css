@@ -87,6 +87,56 @@ body {
 }
 
 .gnb {}
+.gnb::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  display: block;
+  width: 100vw;
+  height: calc(100% - 80px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.depth1 {
+  display: table;
+  table-layout: fixed;
+  width: calc(180px * 6 - 70px);
+  margin: 0 auto;
+}
+
+.depth1 > li {
+  display: table-cell;
+  width: 180px;
+}
+
+.depth1 > li:hover > a {
+  color: #ed1c24;
+}
+
+.depth1 > li:last-child {
+  width: 70px;
+}
+
+.depth1 > li > a {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 80px;
+  color: #000;
+}
+
+.depth2 {
+  padding: 40px 0;
+}
+
+.depth2 li a {
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 15px;
+}
 
 .lang {
   position: absolute;
