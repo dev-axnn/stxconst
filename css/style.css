@@ -145,22 +145,6 @@ body {
   color: #ed1c24 !important;
 }
 
-.depth1 > li > a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -28px;
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #ed1c24;
-  transition: width 0.5s;
-}
-
-.depth1 > li:hover > a::after {
-  width: 100%;
-}
-
 .depth2 {
   padding: 40px 0;
 }
@@ -255,13 +239,7 @@ body {
 }
 
 /* work-part */
-.part {
-
-}
-
-.part .inner {
-  padding-top: 115px;
-}
+.part {}
 
 .part-title {
   position: relative;
@@ -269,8 +247,8 @@ body {
   color: #111;
   font-weight: 700;
   text-align: center;
+  padding-top: 115px;
   padding-bottom: 25px;
-  margin-bottom: 29px;
 }
 
 .part-title::after {
@@ -293,6 +271,7 @@ body {
 }
 
 .part-list {
+  margin-bottom: 130px;
 }
 
 .part-list li {
@@ -300,7 +279,6 @@ body {
   height: 420px;
   float: left;
   background: url('../images/img_business.png') no-repeat;
-  margin-bottom: 130px;
 }
 
 .part-list li a {
@@ -309,14 +287,14 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(244, 128, 37, 0);
-  transition: background 0.5s;
+  transition: background-color 0.5s;
 }
 
 .part-list li a:hover {
   background: rgba(244, 128, 37, 1.0);
 }
 
-.part-list li a:hover ::after {
+.part-list li a:hover::after {
   opacity: 1.0;
 }
 
@@ -374,10 +352,6 @@ body {
   position: relative;
 }
 
-.news .inner {
-  z-index: 9;
-}
-
 .news::before {
   content: '';
   position: absolute;
@@ -396,6 +370,10 @@ body {
   width: 50%;
   height: 100%;
   background: #ed1c24;
+}
+
+.news .inner {
+  z-index: 9;
 }
 
 .news-box {
@@ -419,11 +397,10 @@ body {
   margin-bottom: 45px;
 }
 
-.news-list {
-}
+.news-list {}
 
 .news-list li {
-  margin: 25px 0;
+  padding: 25px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -460,10 +437,144 @@ body {
 }
 
 /* cs */
-.cs {}
+.cs {
+  background: #f8f8f8;
+}
+.cs .inner {
+  padding: 60px 0;
+}
+.cs .inner a {
+  display: block;
+  float: left;
+  width: calc(50% - 1px);
+  padding: 50px 55px;
+}
+.cs-faq {
+  margin-right: 2px;
+  background: #fff url('../images/bg_faq.png') no-repeat;
+  background-position: calc(100% - 50px) center;
+}
+.cs-qna {
+  background: #fff url('../images/bg_custom.png') no-repeat;
+  background-position: calc(100% - 50px) center;
+}
+
+.cs h3 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.cs p {
+  font-weight: 300;
+}
 
 /* about */
-.about {}
+.about .inner {
+  padding: 100px 0;
+}
+.about-top {
+  background: url('../images/img_about.png') no-repeat;
+  background-position: right top;
+  padding-bottom: 70px;
+}
+
+.about-top h2 {
+  font-size: 44px;
+  color: #111;
+  margin-bottom: 55px;
+}
+
+.about-top p {
+  position: relative;
+  padding-left: 100px;
+}
+
+.about-top p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 37px;
+  height: 5px;
+  background-color: #ed1c24;
+}
+
+.about-top p strong {  
+  display: block;
+  font-size: 21px;
+  color: #111;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-top p span {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.about-bottom {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.about-bottom a {
+  display: inline-block;
+  margin-right: 210px;
+  
+  font-size: 22px;
+  font-weight: 500;
+  color: #111;
+}
+
+.about-bottom a::before {
+  content: '';
+  position: relative;
+  display: block;
+
+  width: 100px;
+  height: 108px;
+  background: url('../images/bg_icon.png') no-repeat;
+
+  margin-bottom: 25px;
+}
+
+.about-bottom .about-link-1::before {
+  background-position: 0 0;
+}
+.about-bottom .about-link-2::before {
+  background-position: 50% 0;
+}
+
+.about-bottom .about-link-3 {
+  margin-right: 0;
+}
+.about-bottom .about-link-3::before {
+  background-position: 100% 0;
+}
 
 /* footer */
-.footer {}
+.footer {
+  background-color: #4e4e4e;
+}
+.footer .inner {
+  padding: 50px 0;
+}
+
+.footer-wrap {
+  padding-left: 250px;
+  background: url('../images/logo_footer.png') no-repeat;
+}
+
+.footer-wrap address {
+  color: #c3c3c3;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.copy {
+  color: #c3c3c3;
+  font-size: 13px;
+}
