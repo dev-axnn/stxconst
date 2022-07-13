@@ -1,3 +1,27 @@
+$(document).ready(function(){  //모달창만 복사해서 붙여쓸 수 있게 한 번 더 씀.
+  // 추가 기능 : 스크롤바 없애기
+  $('html').css('overflow', 'hidden');
+  // 모달창 기능
+  let modalWrap = $('.modal-wrap');
+  let modalClose = $('.modal-close')
+  modalClose.click(function(){
+    modalWrap.stop().fadeOut(200);
+    // 추가 기능 : 스크롤바 살리기
+    $('html').css('overflow', 'auto');
+  });
+  let modalMain = $('.modal-main');
+  // 내용 배경 클릭하면 창 닫기
+  modalMain.click(function(event){
+    // 모달창 클릭했을때 창닫히지 않게 막기
+    event.stopPropagation();
+  });
+  modalWrap.click(function(){
+    madalWrap.stop().fadeOut(200);
+    $('html').css('overflow', 'auto');
+  });
+
+});
+
 $(document).ready(function () {
   // .header를 저장한다.
   let header = $('.header');
