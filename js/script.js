@@ -16,7 +16,7 @@ $(document).ready(function(){  //모달창만 복사해서 붙여쓸 수 있게 
     event.stopPropagation();
   });
   modalWrap.click(function(){
-    madalWrap.stop().fadeOut(200);
+    modalWrap.stop().fadeOut(200);
     $('html').css('overflow', 'auto');
   });
 
