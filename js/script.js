@@ -1,25 +1,12 @@
-$(document).ready(function(){  //모달창만 복사해서 붙여쓸 수 있게 한 번 더 씀.
-  // 추가 기능 : 스크롤바 없애기
-  $('html').css('overflow', 'hidden');
-  // 모달창 기능
+$(document).ready(function(){
+  // Modal 기능
   let modalWrap = $('.modal-wrap');
-  let modalClose = $('.modal-close')
+  let modalClose = $('.modal-close');
+  // click() 을 이용해서 hide() 해보자!
   modalClose.click(function(){
-    modalWrap.stop().fadeOut(200);
-    // 추가 기능 : 스크롤바 살리기
-    $('html').css('overflow', 'auto');
+    // modalWrap.hide();
+    modalWrap.stop().fadeOut(300);
   });
-  let modalMain = $('.modal-main');
-  // 내용 배경 클릭하면 창 닫기
-  modalMain.click(function(event){
-    // 모달창 클릭했을때 창닫히지 않게 막기
-    event.stopPropagation();
-  });
-  modalWrap.click(function(){
-    modalWrap.stop().fadeOut(200);
-    $('html').css('overflow', 'auto');
-  });
-
 });
 
 $(document).ready(function () {
