@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   // Modal 기능
   let modalWrap = $('.modal-wrap');
   let modalClose = $('.modal-close');
@@ -6,10 +6,23 @@ $(document).ready(function(){
   modalClose.click(function(){
     // modalWrap.hide();
     modalWrap.stop().fadeOut(300);
+    $('html').css('overflow', 'auto');
   });
-});
+  $('html').keydown(function (key) {
+    if (key.keyCode == 13) {
+      modalWrap.stop().fadeOut(200);
+      $('html').css('overflow', 'auto');
+    }
+  });
+  let modalMain = $('.modal-main');
+  modalMain.click(function (event) {
+    event.stopPropagation();
+  });
+  modalWrap.click(function () {
+    modalWrap.stop().fadeOut(200);
+    $('html').css('overflow', 'auto');
+  });
 
-$(document).ready(function () {
   // .header를 저장한다.
   let header = $('.header');
   let gnb = $('.gnb');
